@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color--primario: rgba(0, 0, 0, 0.452);
+    --color--secundario: orange;
+    --color--terciario: red;
+    --color--cuarto:white;
+    --color--quinto:rgba(180, 95, 180, 0.685);
+
+    
+}
+body{
+   /* background:linear-gradient(rgba(10, 5, 37, 0.534), rgb(62, 61, 131));*/
+  background-image: url(../medieval.jpg);
+  background-size:cover; /* o "cover", según lo que busques */
+  background-position:center;
+  background-repeat: no-repeat;
+    width:100%;
+
+}
+
+p{
+    color: rgb(217, 214, 238);
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    background-color: rgb(0, 0, 0);
+    padding: 3%;
+    border-radius: 1,6rem;
+}
+h1 {
+    font-weight: 100;
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    color: var(--color--cuarto);
+    font-size: 2rem;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  /*   text-decoration:underline red; */
+}
+strong{
+    color: var(--color--terciario);
+}
+a{
+    text-shadow: 
+    2px 2px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+a:hover{
+    font-size: 0.6;
+}
+ img{
+    display:block;
+    width: 55%;
+    height: 55%;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 2.5rem;
+    border: 3px solid rgb(0, 0, 0);
+  
+}
+span{
+    color: var(--color--secundario);
+}
+
+.texto-destacado{
+    color:var(--color--secundario);
+    border: 2px solid var(--color--cuarto);
+    text-shadow: 
+    2px 2px 0 rgba(151, 28, 28, 0.445),
+    -2px -2px 0 rgba(175, 21, 21, 0.418),
+    2px -2px 0 rgba(156, 17, 17, 0.445),
+    -2px 2px 0 rgba(168, 15, 15, 0.384);
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    width: 30vw;
+    display: block;
+    
+    
+}
+.titulo-blog{
+    color:var(--color--cuarto);
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.445),
+    -2px -2px 0 rgba(0, 0, 0, 0.418),
+    2px -2px 0 rgba(0, 0, 0, 0.445),
+    -2px 2px 0 rgba(0, 0, 0, 0.384);
+   /*  text-decoration:underline red; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:2rem;
+    font-weight: 500;
+    margin-bottom: 3%;
+}
+
+.año{
+    color: var(--color--quinto);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.presentacion{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.foto{
+width: 15%;
+height: 15%;
+}
+.presentacion__contenido{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion__contenido__descripcion{
+    width: 100%;
+    font-size: larger;
+    font-family: "Krona One", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:var(--color--primario);
+}
+.presentacion__contenido__titulo{
+    font-size: xx-large;
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.presentacion__contenido__botones{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:20px;
+
+    
+}
+button{ 
+     display: flex;
+    background-color: var(--color--quinto);
+    border: 1px solid var(--color--cuarto);
+    border-radius: 10px;
+    width: 30%;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    padding: 1.25rem 0;
+    transition: all 0.3s ease-in-out;
+
+}
+
+button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  background:var(--color--cuarto);
+  transition: all 0.3s ease-in-out;
+}
+button:hover::after{
+    opacity: 0.5;
+}
+button a{
+    transition: all 0.3s ease-in-out;
+}
+button:hover a {
+    transform: scale(1.4); /* Reduce el tamaño del enlace */
+}
+button a i{
+    transition: all 0.5s ease;
+}
+button:hover a i{
+    color:var(--color--terciario);
+    border: 0.125rem solid black;
+}
+
+header{
+    background-color:var(--color--primario);
+    width: 100%;
+height: 25%;
+  display: flex;
+  justify-content: center
+
+}
+
+.header__menu{
+
+display: flex;
+justify-content: center;
+gap: 2.5rem;
+align-items: center;
+padding: 3% 5%;
+
+
+}
+.header__menu__link{
+ 
+}
+
+.footer{
+text-align: center;
+border: 0.125rem solid violet;
+padding-top: 20px;
+margin-top: 5%;
+}
+.footer__acercade{
+
+}
+aside{
+/*    position:relative;
+   margin-left: 10%;
+   background-image: url("../pergamino.png"); */
+   /* background-size: contain; */ /* o "cover", según lo que busques */
+/*    background-position: center;
+   background-repeat: no-repeat; */
+    height: 70vh;
+    width:40%;
+   /* Si quitas height y width fijos, el aside crecerá según el contenido */
+   /* min-height: 50vh;  // o el alto que quieras */
+   /* width: 30vw;      // solo si realmente quieres forzar un ancho fijo */
+   
+   padding: 20px; /* Para que el texto no pegue al borde */
+}
+
+.urgente{
+    color: var(--color--terciario);
+    background: linear-gradient(rgba(0, 0, 0, 0.61) 50%, rgba(109, 106, 106, 0.534));
+    padding: 1.25rem;
+    border: 0.125rem solid rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+ 
+        text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.445),
+    -2px -2px 0 rgba(0, 0, 0, 0.418),
+    2px -2px 0 rgba(0, 0, 0, 0.445),
+    -2px 2px 0 rgba(0, 0, 0, 0.384);
+    font-family: 'Courier New', Courier, monospace;
+    
+   transition: 0.5s all ease;
+}
+.cartel{
+    flex-direction: row;
+    justify-content: flex-end;
+    width:50%;
+    margin-left: 5%;
+    align-items: flex-end;
+    left: 8.125rem;
+    top: 6.25rem;
+    position:relative;
+    background-color: var(--color--primario opacity 50%);
+    
+}
+.urgente:hover{
+    background: var(--color--terciario);
+    color: var(--color--cuarto);
+    font-weight: bolder;
+}
+.presentacion__contenido__descripcion__formacion{
+  
+    text-align: center;
+    width: 70%;
+    font-size: larger;
+    font-family: "Krona One", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:var(--color--primario);
+}
+.presentacion__formacion{
+    
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.presentacion__contenido__formacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
