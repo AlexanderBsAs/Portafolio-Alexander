@@ -126,7 +126,8 @@ span{
 }
 
 .año{
-    color: var(--color--quinto);
+   /*  color: var(--color--quinto); */
+   color: var(--color--cuarto);
 }
 
 main{
