@@ -15,13 +15,22 @@
 
     
 }
+html{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
 body{
    /* background:linear-gradient(rgba(10, 5, 37, 0.534), rgb(62, 61, 131));*/
   background-image: url(../medieval.jpg);
   background-size:cover; /* o "cover", según lo que busques */
   background-position:center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
     width:100%;
+    height: 100%;
+   
 
 }
 
@@ -35,7 +44,7 @@ p{
     border: 2px solid white;
     font-size: 1.1rem;
     background-color: rgb(0, 0, 0);
-    padding: 3%;
+    padding:3%;
     border-radius: 1,6rem;
 }
 h1 {
@@ -144,12 +153,14 @@ height: 15%;
 }
 
 .presentacion__contenido__descripcion{
-    width: 100%;
-    font-size: larger;
+    width: 80%;
+    font-size: 1rem;
     font-family: "Krona One", serif;
   font-weight: 400;
   font-style: normal;
   background-color:var(--color--primario);
+  text-align: center;
+  align-self: center;
 }
 .presentacion__contenido__titulo{
     font-size: xx-large;
@@ -214,7 +225,8 @@ header{
     width: 100%;
 height: 25%;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  margin-bottom: 10%;
 
 }
 
@@ -225,6 +237,7 @@ justify-content: center;
 gap: 2.5rem;
 align-items: center;
 padding: 3% 5%;
+width: 100%;
 
 
 }
@@ -237,7 +250,9 @@ text-align: center;
 border: 0.125rem solid violet;
 padding-top: 20px;
 margin-top: 5%;
+width: 100%;
 }
+
 .footer__acercade{
 
 }
@@ -316,3 +331,50 @@ aside{
     align-items: center;
     padding: 5%;
 }
+
+@media(max-width:1440px){
+     header{
+        height:100%
+     }
+    .header__menu{
+        flex-direction: column;
+        height: auto;
+        font-size: small;
+    }
+    .header__menu a h1{
+        font-size: 1.5rem;
+    }
+
+}
+
+/* 📱 Móviles (pantallas de hasta 600px) */
+@media (max-width: 600px) {
+
+    .presentacion {
+        flex-direction: column;
+    }
+    button {
+        width: 80%;
+    }
+}
+
+/* 🖥️ Tablets (pantallas de hasta 1024px) */
+@media (max-width: 1024px) {
+    .presentacion {
+        flex-direction: column;
+    }
+    .presentacion__contenido {
+        width: 90%;
+    }
+}
+
+/* 💻 Laptops y pantallas grandes (hasta 1440px) */
+/* @media (max-width: 1440px) {
+    .presentacion {
+        width: 80%;
+    }
+    button {
+        width: 50%;
+    }
+} */
+ 
